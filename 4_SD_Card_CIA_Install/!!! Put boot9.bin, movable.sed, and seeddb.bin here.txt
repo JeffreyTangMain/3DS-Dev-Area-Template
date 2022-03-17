@@ -1,0 +1,1 @@
+You need to get boot9.bin, movable.sed, and seeddb.bin and put them in this folder next to custominstall.py

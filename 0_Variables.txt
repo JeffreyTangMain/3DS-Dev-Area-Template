@@ -1,0 +1,9 @@
+SET cleanCiaPath="1_Clean_CIA_Dump"
+SET modpackPath="2_Modpack"
+SET moddedBuildPath="3_Modded_Build"
+SET ciaInstallPath="4_SD_Card_CIA_Install"
+SET sdLumaPath="luma\titles"
+SET sdPath=K:\
+SET ciaName="Modded_Undubbed_Fates_US_SE.cia"
+SET outputCxi="0000.00000000.ncch"
+SET buildCommand=makerom -f cia -target p -ignoresign -o
