@@ -1,5 +1,5 @@
 # 3DS-Dev-Area-Template
-A template work area for modifying and recompiling 3DS CIAs
+A template work area for modifying and recompiling 3DS CIAs. Feel free to delete the .placeholder files after downloading a copy of this repo.
 
 Modify 0_Variables.txt to set paths and output names. You have to dump your own CIA after getting one before being able to use this template.
 
