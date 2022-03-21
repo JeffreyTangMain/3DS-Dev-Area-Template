@@ -6,7 +6,7 @@ cd "%moddedBuildPath%"
 Romfs_Builder_CMD romfs
 3dstool -cvtf exefs exefs.bin --header exefsheader.bin --exefs-dir exefs
 
-for %%j in ("%~dp0\exefs\logo.*") do (
+for %%j in ("%cd%\exefs\logo.*") do (
 	3dstool -cvtf cxi "%outputCxi%" --header ncchheader.bin --exh exheader.bin --logo "%%~fj" --plain plain.bin --exefs exefs.bin --romfs romfs.bin --not-update-exefs-hash --not-update-romfs-hash --not-encrypt
 )
 

@@ -2,7 +2,7 @@ setlocal
 
 for /f "usebackq delims=" %%A in ("0_Variables.txt") do %%A
 
-for /d %%i in ("%~dp0\%modpackPath%\*") do (
+for /d %%i in ("%cd%\%modpackPath%\*") do (
 	ROBOCOPY "%%i\romfs" "%moddedBuildPath%\romfs" /E /is /it /im
 )
 
