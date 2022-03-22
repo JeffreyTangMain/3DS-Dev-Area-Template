@@ -30,12 +30,13 @@ You shouldn't need to touch any other folder, the batch files should be able to 
 
 # Example Run
 
-1. Place .cia in root directory and set ciaName, outputCxi, buildCommand, and toolParams variables.
+1. Place .cia in root directory and set ciaName, buildCommand, and toolParams variables.
 2. Run 1_Extract_CIA
-3. Run 1_Extract_NCCH
-4. Place modified romfs files into titleID\romfs
-5. Run 3_Clean_Build
-6. Run 4_Install_CIA_to_SD
+3. Set outputCxi variable.
+4. Run 1_Extract_NCCH
+5. Place modified romfs files into titleID\romfs
+6. Run 3_Clean_Build
+7. Run 4_Install_CIA_to_SD
 
 # Credits
   - https://github.com/VelouriasMoon/RomFS-Builder-CMD
