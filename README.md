@@ -1,7 +1,7 @@
 # 3DS-Dev-Area-Template
 A template work area for modifying and recompiling 3DS CIAs. Feel free to delete the .placeholder files after downloading a copy of this repo. This template is designed to manipulate 1 romfs at a time. This *can* be worked to open up and modify DLC CIAs, but it'll be a bit of a hassle, so modify the existing batch commands to your liking.
 
-Modify 0_Variables.txt to set paths and output names. Modify 0_Build_CIA.bat to enable hash updating or encryption by removing their arguments (--not-update-exefs-hash --not-update-romfs-hash --not-encrypt) from the command near the top. You have to dump your own CIA after getting one before being able to use this template.
+Modify 0_Variables.txt to set paths, output names, and parameters for 3dstool. You have to dump your own CIA after getting one before being able to use this template.
 
 Your *unmodified* dump of the CIA will be put into 1_Clean_CIA_Dump alongside the existing .exe files. This should be the dump you want to put your mods onto and it should have a romfs folder, an exefs folder, all the ncch files needed to build the CIA, exefsheader.bin, exheader.bin, ncchheader.bin, and plain.bin.
 
