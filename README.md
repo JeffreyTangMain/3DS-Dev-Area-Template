@@ -10,7 +10,9 @@ Your modpack goes into 2_Modpack, into the titleID folder (rename this to the ti
 You shouldn't need to touch any other folder, the batch files should be able to handle everything else for you.
 
 # Scripts
-0_Build_CIA.bat: This builds the CIA after it's been modified from inside 3_Modded_Build, copying the CIA output to inside 4_SD_Card_CIA_Install.
+0_Build_CIA: This builds the CIA after it's been modified from inside 3_Modded_Build, copying the CIA output to inside 4_SD_Card_CIA_Install.
+
+1_Rename_Contents: This script renames cxi/ncch files in 1_Clean_CIA_Dump with the name format "contents.XXX.YYYYY" to "XXX.YYYYY.ncch" for the other scripts to work.
 
 3_Clean_Build: This will build your CIA from scratch by moving files from 1_Clean_CIA_Dump into 3_Modded_Build followed by moving your modpack from inside 2_Modpack over the ones in 3_Modded_Build to end up with a modified build of the clean dump.
 
