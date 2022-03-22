@@ -7,6 +7,6 @@ rmdir /s /q "%cd%\romfs"
 rmdir /s /q "%cd%\exefs"
 3dstool -xvtf cxi %outputCxi% --header ncchheader.bin --exh exheader.bin --logo logo.bcma.lz --plain plain.bin --exefs exefs.bin --romfs romfs.bin
 3dstool -xvtf romfs romfs.bin --romfs-dir "%cd%\romfs"
-3dstool -xvtf exefs exefs.bin --exefs-dir "%cd%\exefs"
+3dstool -xvtf exefs exefs.bin --exefs-dir "%cd%\exefs" --header exefsheader.bin
 
 endlocal
