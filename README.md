@@ -9,6 +9,10 @@ Your *unmodified* dump of the CIA will be put into 1_Clean_CIA_Dump alongside th
 
 Your modpack goes into 2_Modpack, into the titleID folder (rename this to the titleID of your game), and all modifications should go into romfs. The scripts are specifically tailored for the single romfs folder, but likely could be molded to manipulate any other extracted folders. 
 
+Inside 4_SD_Card_CIA_Install, you'll need to put your boot9.bin, movable.sed, and seeddb.bin next to the .txt that mentions those files.
+  - boot9.bin and movable.sed: https://ihaveamac.github.io/dump.html
+  - seeddb.bin: https://github.com/ihaveamac/3DS-rom-tools/raw/master/seeddb/seeddb.bin
+
 You shouldn't need to touch any other folder, the batch files should be able to handle everything else for you. 
 
 These scripts are designed to be relatively light and modular, but the nature of CIA files makes it hard to pack everything into an all in one solution.
