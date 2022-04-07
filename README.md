@@ -30,7 +30,7 @@ These scripts are designed to be relatively light and modular, but the nature of
 
 3_Quick_Build: This will ignore cleaning up your existing 3_Modded_Build directory and will just copy from 2_Modpack over to 3_Modded_Build, resulting in a faster build time but with possible lingering files from previous builds.
 
-4_Install_CIA_to_SD: This uses custom_install to install any CIAs in 4_SD_Card_CIA_Install to your SD card. If this step fails, you likely have to install the dependencies onto your computer. Go to the custom-install repo below and follow the instructions to install the dependencies from requirements-win32.txt. You need Python 3 for this.
+4_Install_CIA_to_SD: This uses custom_install to install any CIAs in 4_SD_Card_CIA_Install to your SD card. If this step fails, you likely have to install the dependencies onto your computer. Go into 0_Dependencies and run 0_Install_Dependencies with Python 3 installed as your default version of python. If this doesn't work, manually run windows-install-dependencies.py with "py -3 windows-install-dependencies.py".
 
 5_Clear_SD: This will delete any romfs folder inside the titleID folder under luma/titles to remove any existing romfs Luma patch mods.
 
