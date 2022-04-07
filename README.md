@@ -53,3 +53,4 @@ These scripts are designed to be relatively light and modular, but the nature of
   - https://github.com/dnasdw/3dstool
   - https://github.com/3DSGuy/Project_CTR
   - https://github.com/ihaveamac/custom-install
+  - https://docs.microsoft.com/en-us/sysinternals/downloads/sync
