@@ -1,4 +1,5 @@
 SET cleanCiaPath="1_Clean_CIA_Dump"
+SET modPath="2_Individual_Mods"
 SET modpackPath="2_Modpack"
 SET moddedBuildPath="3_Modded_Build"
 SET ciaInstallPath="4_SD_Card_CIA_Install"
@@ -6,7 +7,6 @@ SET sdLumaPath="luma\titles"
 SET sdPath=K:\
 SET ciaName="CIA_Name.cia"
 SET ncchType=cxi
-SET scriptType=.bat
 SET outputNcch="0000.00000000.ncch"
 SET buildCommand=makerom -f cia -target p -ignoresign -major 0 -minor 0 -micro 0 -o
 SET toolParams=--not-update-exefs-hash --not-update-romfs-hash --not-encrypt

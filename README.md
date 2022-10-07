@@ -9,6 +9,8 @@ Your *unmodified* dump of the CIA will be put into 1_Clean_CIA_Dump alongside th
 
 Your modpack goes into 2_Modpack, into the titleID folder (rename this to the titleID of your game), and all modifications should go into romfs. The scripts are specifically tailored for the single romfs folder, but likely could be molded to manipulate any other extracted folders. 
 
+2_Individual_Mods is an implementation of a mod load order, which will be copied into 2_Modpack in the order they exist alphabetically and numerically. This means any **lower** mods are the ones that overwrite **higher** ones. For example, any files in 1_Sample_Mod will be overwritten by matching files in 2_Sample_Mod. This isn't necessary to use the template, it's possible to just use 2_Modpack for everything, but it's convenient for putting multiple mods together when you only work on one. If you don't plan on using this, **remove** the sample mod folder so nothing is copied over into your workspace.
+
 Inside 4_SD_Card_CIA_Install, you'll need to put your boot9.bin, movable.sed, and seeddb.bin next to the .txt that mentions those files.
   - boot9.bin and movable.sed: https://ihaveamac.github.io/dump.html
   - seeddb.bin: https://github.com/ihaveamac/3DS-rom-tools/raw/master/seeddb/seeddb.bin
@@ -29,6 +31,8 @@ These scripts are designed to be relatively light and modular, but the nature of
 1_Extract_NCCH: This extracts a single ncch file as specified in 0_Variables as outputCxi to the romfs and exefs folders.
 
 1_Extract_NCCH_DLC: This script is intended for DLC, but can also be used to somewhat mass dump ncch files in 1_Clean_CIA_Dump. Because it's made for DLC, the build commands won't properly rebuild everything, you'll have to stitch together both this script and the above script to make it work in that way. However, you shouldn't need to mass dump often because most main games or updates rarely have more than a few ncch files. Each file from the ncch files will be named after their corresponding ncch file.
+
+2_Build_Modpack: This script copies everything from every mod in 2_Individual_Mods into 2_Modpack from top to bottom, following natural numbering order. This means mods that are lower in Explorer when sorted alphabetically should overwrite any mods that are higher.
 
 3_Clean_Build: This will build your CIA from scratch by moving files from 1_Clean_CIA_Dump into 3_Modded_Build followed by moving your modpack from inside 2_Modpack over the ones in 3_Modded_Build to end up with a modified build of the clean dump.
 
