@@ -8,6 +8,6 @@ for /d %%i in ("%moddedBuildPath%\*") do (
 )
 ROBOCOPY %cleanCiaPath% %moddedBuildPath% /E
 
-"3_Quick_Build.bat"
+call "3_Quick_Build.bat"
 
 endlocal
