@@ -26,6 +26,8 @@ These scripts are designed to be relatively light and modular, but the nature of
 
 1_Clean_Workspace: This deletes all non .exe files in 1_Clean_CIA_Dump, clears out 3_Modded_Build, and deletes any .cia files in 4_SD_Card_CIA_Install. This script is designed to basically reset everything *except* your modpack or any other files you've taken out of these directories. After running this script, you can easily get started on a new project.
 
+1_Export_Files_to_List: This script exports all files in its folder and its subfolders to a list.txt file. This is supposed to be cut and pasted around wherever you need a list of files, usually used to manually create a patch_file_list.txt for updates that you're modding, which need a list of files to overwrite. You would do this in your modpack to get a list of your modded files, and then you cuold add it to the existing patch_file_list.txt, removing duplicates afterwards.
+
 1_Extract_CIA: This script will extract any CIA in the root directory (with the scripts) and renames cxi/ncch files in 1_Clean_CIA_Dump with the name format "contents.XXX.YYYYY" to "XXX.YYYYY.ncch" for the other scripts to work.
 
 1_Extract_NCCH: This extracts a single ncch file as specified in 0_Variables as outputCxi to the romfs and exefs folders.
