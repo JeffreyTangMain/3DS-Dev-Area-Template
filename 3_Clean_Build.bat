@@ -6,7 +6,7 @@ del /s /q "%moddedBuildPath%\"
 for /d %%i in ("%moddedBuildPath%\*") do (
 	rmdir /s /q "%%i"
 )
-ROBOCOPY %cleanCiaPath% %moddedBuildPath% /E
+ROBOCOPY %cleanCiaPath% %moddedBuildPath% /e /nfl /ndl /xj /r:0 /w:0 /mt:8
 
 call "3_Quick_Build.bat"
 
