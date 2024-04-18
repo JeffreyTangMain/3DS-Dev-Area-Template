@@ -2,7 +2,7 @@ setlocal
 
 for /f "usebackq delims=" %%A in ("0_Variables.txt") do %%A
 
-del /s /q "%moddedBuildPath%\"
+del /s /q "%moddedBuildPath%\" > nul
 for /d %%i in ("%moddedBuildPath%\*") do (
 	rmdir /s /q "%%i"
 )
@@ -10,10 +10,10 @@ for /d %%i in ("%cleanCiaPath%\*") do (
 	rmdir /s /q "%%i"
 )
 for %%i in ("%cleanCiaPath%\*") do (
-	if not "%%~xi"==".exe" del "%%i"
+	if not "%%~xi"==".exe" del "%%i" > nul
 )
 for %%i in ("%ciaInstallPath%\*") do (
-	if "%%~xi"==".cia" del "%%i"
+	if "%%~xi"==".cia" del "%%i" > nul
 )
 
 endlocal

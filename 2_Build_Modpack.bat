@@ -8,7 +8,7 @@ for /d %%f in ("%modPath%\*") do (
 goto nomods
 
 :mods
-del /s /q "%modpackPath%\"
+del /s /q "%modpackPath%\" > nul
 for /d %%i in ("%modpackPath%\*") do (
 	rmdir /s /q "%%i"
 )

@@ -2,7 +2,7 @@ setlocal
 
 for /f "usebackq delims=" %%A in ("0_Variables.txt") do %%A
 
-del /s /q "%moddedBuildPath%\"
+del /s /q "%moddedBuildPath%\" > nul
 for /d %%i in ("%moddedBuildPath%\*") do (
 	rmdir /s /q "%%i"
 )
