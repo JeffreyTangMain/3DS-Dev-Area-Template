@@ -22,7 +22,7 @@ for /d %%f in ("%modPath%\*") do (
 )
 
 for /f "tokens=2 delims==" %%i in ('set file[') do (
-	ROBOCOPY "%%~fi" %modpackPath% /mir /xx /nfl /ndl /xj /r:0 /w:0 /mt:8
+	ROBOCOPY "%%~fi" %modpackPath% /mir /xx /nfl /ndl /r:0 /w:0 /mt:8
 )
 
 :nomods
