@@ -1,3 +1,4 @@
+@echo off
 setlocal enabledelayedexpansion
 
 for /f "usebackq delims=" %%A in ("0_Variables.txt") do %%A
@@ -10,7 +11,7 @@ goto nomods
 :mods
 del /s /q "%modpackPath%\" > nul
 for /d %%i in ("%modpackPath%\*") do (
-	rmdir /s /q "%%i"
+	rmdir /s /q "%%i" > nul
 )
 
 for /d %%f in ("%modPath%\*") do (
@@ -21,7 +22,7 @@ for /d %%f in ("%modPath%\*") do (
 )
 
 for /f "tokens=2 delims==" %%i in ('set file[') do (
-	ROBOCOPY "%%~fi" %modpackPath% /e /nfl /ndl /xj /r:0 /w:0 /mt:8
+	ROBOCOPY "%%~fi" %modpackPath% /mir /xx /nfl /ndl /xj /r:0 /w:0 /mt:8
 )
 
 :nomods

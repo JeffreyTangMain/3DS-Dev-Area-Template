@@ -1,18 +1,19 @@
+@echo off
 setlocal enabledelayedexpansion
 
 for /f "usebackq delims=" %%A in ("0_Variables.txt") do %%A
 
 cd %moddedBuildPath%
-Romfs_Builder_CMD romfs
-3dstool -cvtf exefs exefs.bin --header exefsheader.bin --exefs-dir exefs
+Romfs_Builder_CMD romfs > nul
+3dstool -cvtf exefs exefs.bin --header exefsheader.bin --exefs-dir exefs > nul
 
 SET toolCommand=3dstool -cvtf %ncchType% %outputNcch% --header ncchheader.bin --exh exheader.bin --logo "%%~fj" --plain plain.bin --exefs exefs.bin --romfs romfs.bin %toolParams%
 for %%j in ("%cd%\exefs\logo.*") do (
-	%toolCommand%
+	%toolCommand% > nul
 	goto toolComplete
 )
 for %%j in ("%cd%\logo.*") do (
-	%toolCommand%
+	%toolCommand% > nul
 	goto toolComplete
 )
 :toolComplete
@@ -24,7 +25,7 @@ for %%i in (*.ncch) do (
 	)
 )
 
-%buildCommand%
+%buildCommand% > nul
 MOVE /Y %ciaName% "..\%ciaInstallPath%"
 
 endlocal

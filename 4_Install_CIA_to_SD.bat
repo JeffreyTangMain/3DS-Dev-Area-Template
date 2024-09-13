@@ -1,3 +1,4 @@
+@echo off
 setlocal
 
 for /f "usebackq delims=" %%A in ("0_Variables.txt") do %%A
@@ -11,3 +12,5 @@ for %%i in (*.cia) do (
 sync64 -e %sdPath:~0,1%
 
 endlocal
+
+pause
