@@ -9,7 +9,7 @@ for %%i in (*.cia) do (
 	python custominstall.py -b boot9.bin -s seeddb.bin -m movable.sed --sd %sdPath% "%%~nxi"
 )
 
-sync64 -e %sdPath:~0,1%
+sync64 -r -e %sdPath:~0,1%
 
 endlocal
 
